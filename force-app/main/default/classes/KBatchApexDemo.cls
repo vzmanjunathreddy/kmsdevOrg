@@ -6,6 +6,8 @@ public class KBatchApexDemo implements Database.Batchable<sObject> {
         string query='Select Id,Name, City__c  from KHotel__c';
 
         return Database.getQueryLocator(query);
+
+        // comments
                
     }
     public void execute(Database.BatchableContext bc, List<KHotel__c> hotels){

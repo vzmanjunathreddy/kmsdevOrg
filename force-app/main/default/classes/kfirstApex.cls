@@ -64,7 +64,7 @@ public with sharing class kfirstApex {
     }
 
     
-    public  Map<Id, Account> getListofmpAccounts()
+    public Map<Id, Account> getListofmpAccounts()
     {
         Map<Id,Account> mpAccounts= new Map<Id,Account>();
          
@@ -77,47 +77,5 @@ public with sharing class kfirstApex {
         return mpAccounts;
          
     }
-
-    /**
-     * Execution in anonymous window
-     * 
-     
-  kfirstApex kobj= new kfirstApex();
-
-  Map<String,String> mphotels=  kobj.getListofHotelsintheCity();
-
-  Set<String> hotelKeys= mphotels.keySet();
-
- if(mphotels.containsKey('Banglore'))
- {
-       for(string hotlkey:hotelKeys)
-  	{
-      // Display only the hotel of Nagpur no other cities
-      
-      if(hotlkey=='Banglore')
-      {
-        System.debug('Key for the hotel is '+hotlkey +'Value inside is'+ mphotels.get(hotlkey));
-
-      }
-  }
- }
-else
-{
-     System.debug('No relevant results found for the search');
-
-}
-
-kfirstApex kobj= new kfirstApex();
-
-Map<Id, Account> mapaccounts=kobj.getListofmpAccounts();
-
-SET<ID> accountIds=mapaccounts.keySet();
-
-for(ID accid: accountIds)
-{
-    Account ac= mapaccounts.get(accid);
-    System.debug('Account Key is ' + accid +' | '+'Account Name is ' + ac.Name);
-}
-     */
 
 }

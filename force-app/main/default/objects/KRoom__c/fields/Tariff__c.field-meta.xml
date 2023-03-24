@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tariff__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(Occupancy__c,&apos;Single&apos;),100,
+IF(ISPICKVAL(Occupancy__c,&apos;Double&apos;),300,
+IF(ISPICKVAL(Occupancy__c,&apos;Executive&apos;),650,
+
+IF(ISPICKVAL(Occupancy__c,&apos;Deluxe&apos;),1000,
+500)
+)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Tariff</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

@@ -5,7 +5,8 @@ public with sharing class KReciepe implements KReciepeInterface{
      System.debug('Welcome to Reciepe preparation ...');
     }
     
-    public List<string> GetRecipeMenuItems()
+
+    public  List<string> GetRecipeMenuItems(List<Account> acc)
     {
         List<string> menuItems=null;
 
