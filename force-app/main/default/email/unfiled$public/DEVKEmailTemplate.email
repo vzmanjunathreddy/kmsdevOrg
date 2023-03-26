@@ -1,0 +1,6 @@
+Hi {!Case.OwnerEmail},
+
+Kindly acknowledge the Customer with initial response.  with {!Case.Id} to resolve the issue at the earliest.
+
+thank you.
+Support team
