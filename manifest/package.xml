@@ -24,5 +24,9 @@
 		<members>Dev_SFDC_License</members>
 		<name>PermissionSet</name>
 	</types>
+	<types>
+		<members>KHotel__c.NewHotelRoom</members>
+		<name>QuickAction</name>
+	</types>
 	<version>55.0</version>
 </Package>
