@@ -38,7 +38,6 @@
 		<members>KBasicFlow</members>
 		<members>KReservationDiscountFlow</members>
 		<members>KReservationFlow</members>
-		<members>Welcome_Screen</members>
 		<name>Flow</name>
 	</types>
 	<types>
