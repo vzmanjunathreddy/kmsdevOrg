@@ -6,7 +6,7 @@ public with sharing class KReciepe implements KReciepeInterface{
     }
     
 
-    public  List<string> GetRecipeMenuItems(List<Account> acc)
+    public  List<string> GetRecipeMenuItems()
     {
         List<string> menuItems=null;
 
