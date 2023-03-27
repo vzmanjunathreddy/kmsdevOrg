@@ -7,10 +7,19 @@
 		<members>KQueueableDemo</members>
 		<members>KReciepe</members>
 		<members>KReciepeInterface</members>
+		<members>KRecursiveTirggerHandler</members>
+		<members>KHotelTriggerHandler</members>
+		<members>KSObjectApex</members>
 		<members>ProcessTaskApex</members>
 		<members>kSecondApex</members>
 		<members>kfirstApex</members>
 		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>KNoTestLeads</members>
+		<members>KRecursiveTrigger</members>
+		<members>KHotelTrigger</members>
+		<name>ApexTrigger</name>
 	</types>
 	<types>
 		<members>Dining__c</members>
@@ -34,10 +43,10 @@
 		<name>EmailTemplate</name>
 	</types>
 	<types>
-		<members>DevCaseSurvey</members>
 		<members>KBasicFlow</members>
 		<members>KReservationDiscountFlow</members>
 		<members>KReservationFlow</members>
+		<members>Welcome_Screen</members>
 		<name>Flow</name>
 	</types>
 	<types>
