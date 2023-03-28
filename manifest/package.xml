@@ -12,6 +12,9 @@
 		<members>KSObjectApex</members>
 		<members>ProcessTaskApex</members>
 		<members>kSecondApex</members>
+		<members>KHotelTriggerHandlerTest</members>
+		<members>KBasicsTest</members>
+		<members>ProcessTaskApexKTest</members>
 		<members>kfirstApex</members>
 		<name>ApexClass</name>
 	</types>
