@@ -1,3 +1,8 @@
 <template>
-    <c-kwire-parent-child hotelslist= {hotels}> </c-kwire-parent-child>
+    <template if:true = {hotelsdata}> 
+    <c-kwire-parent-child hotelslist= {hotelsdata}> </c-kwire-parent-child>
+</template>
+  <template if:true= {errordata}>
+     <div>  {errordata} </div>
+  </template>
 </template>

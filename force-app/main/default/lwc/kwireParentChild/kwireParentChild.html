@@ -1,8 +1,8 @@
 <template>
-    <lightning-card  variant="Narrow"  title="Wire Hotels" icon-name="custom:custom80">
-        <div class="slds-var-p-around_medium">       
-            <template for:each= {hotelslist.data} for:item= "hotel" >
-                <ul key= {hotel.Id} class="slds-var-p-around_medium">
+    <lightning-card  variant="Narrow"  title="Wire Parent Child Hotels" icon-name="custom:custom80">
+        <div  class="slds-m-around_medium">       
+            <template for:each= {hotelslist} for:item= "hotel" >
+                <ul key= {hotel.Id}  class="slds-m-around_medium">
                     <li> {hotel.Name}</li>
                 </ul>  
             </template>
