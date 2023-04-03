@@ -1,0 +1,28 @@
+<apex:page controller="KCustomController">
+    <apex:form> 
+        <apex:pageBlock>
+            <apex:pageBlockSection title="Accounts from Custom Controller ">
+                <apex:pageBlockTable value="{!accountsList}" var="ac">
+                    <apex:column value="{!ac.name}"/>
+                    <apex:column value="{!ac.site}"/>
+                    <apex:column value="{!ac.type}"/>
+                    <apex:column value="{!ac.accountNumber}"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection title="Create Account" columns="2">
+  
+                  <apex:inputField label="Account Name" value="{!accountObj.name}"/>
+                  <apex:inputField label="Account Site" value="{!accountObj.site}"/>
+                  <apex:inputField label="Account type" value="{!accountObj.type}"/>
+                  <apex:inputField label="Account Number" value="{!accountObj.accountNumber}"/>
+
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockButtons>
+                <apex:commandButton action="{!createMyAccount}" value="Save My account"/>
+            </apex:pageBlockButtons>
+            
+        </apex:pageBlock>
+</apex:form>
+</apex:page>

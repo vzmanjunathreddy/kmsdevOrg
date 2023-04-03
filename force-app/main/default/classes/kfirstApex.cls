@@ -5,7 +5,12 @@ public with sharing class kfirstApex {
     Integer num;
     string nameOfaPerson;
 
+
     public void getReciepeDetails2()
+    {
+     System.debug('Welcome to Reciepe preparation ...');
+    }
+    public void getReciepeDetails4()
     {
      System.debug('Welcome to Reciepe preparation ...');
     }

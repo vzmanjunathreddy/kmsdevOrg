@@ -42,7 +42,6 @@ public class KBasicsTest {
         string accountName='ABB Solution Ltd';
         Test.startTest();
          acutalData=KBasics.getAccountDetails('0015j00000wTfUuAAK');
-         
         if(acutalData.size()>0)
         {
             System.debug('Account obj has records and data is '+acutalData);

@@ -1,0 +1,55 @@
+<apex:page standardController="Account" recordSetVar="accounts" >
+ 
+  <h1>Congratulations </h1>
+   <apex:PageBlock >
+    <apex:form >
+      <apex:pageBlockSection title="Account Details" >
+      
+        <div> Welcome to VF Development {!$User.FirstName} and you are view the Account of {!account.Name} </div>
+      
+      </apex:pageBlockSection>
+      
+            <apex:pageBlockSection title="Create Account {!$User.FirstName}">
+
+      
+      </apex:pageBlockSection>
+      
+        <apex:pageBlock title="My Content" mode="edit">
+        
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="Save"/>
+                <apex:commandButton action="{!cancel}" value="Cancel the record"/>
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection title="My Content Section" columns="2">
+                <apex:inputField value="{!account.name}"/>
+                <apex:inputField value="{!account.site}"/>
+                <apex:inputField value="{!account.type}"/>
+                <apex:inputField value="{!account.accountNumber}"/>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Account Contacts">
+
+              <apex:pageBlockTable value="{!account.Contacts}" var="ct">
+
+                  <apex:column value="{!ct.name}"/>
+  
+          </apex:pageBlockTable>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection title="Accounts are ">
+
+            <apex:pageBlockTable value="{!accounts}" var="ac">
+
+                <apex:column value="{!ac.name}"/>
+                <apex:column value="{!ac.site}"/>
+                <apex:column value="{!ac.type}"/>
+                <apex:column value="{!ac.accountNumber}"/>
+
+        </apex:pageBlockTable>
+          </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+   </apex:form>
+   </apex:PageBlock>
+</apex:page>

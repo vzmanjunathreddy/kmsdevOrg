@@ -1,0 +1,12 @@
+<template>
+    <lightning-layout>
+        <lightning-card  variant="Narrow"  title="Hotels " icon-name="custom:custom80">     
+            <div class="slds-var-p-around_medium">       
+                <template for:each= {hotels} for:item= "hotel" >            
+                        <c-khotels-parent-child key= {hotel.id} myhotel= {hotel}>                  
+                        </c-khotels-parent-child>        
+                </template>
+            </div>
+        </lightning-card>
+    </lightning-layout>
+</template>

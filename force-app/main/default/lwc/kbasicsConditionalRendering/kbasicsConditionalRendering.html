@@ -1,0 +1,16 @@
+<template>
+    <lightning-card  variant="Narrow"  title="ConditionalRendering" icon-name="custom:custom66">
+        <div class="slds-var-p-around_medium">  
+         <lightning-input type="checkbox" label="Agree Terms and Conditions" onchange= "{handleCheckboxChange}" name="input1"></lightning-input>
+         
+            
+            <template if:true= {hastoDisplay}>
+                <div class="slds-var-p-around_medium"> {hastoDisplay}</div>
+        </template>
+    </div>
+    </lightning-card>
+
+
+
+
+</template>

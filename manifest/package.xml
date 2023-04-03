@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
+		<members>KBasicsTest</members>
 		<members>KBatchApexDemo</members>
 		<members>KDEMOSOSL</members>
 		<members>KDemoFuture</members>
+		<members>KHotelTriggerHandler</members>
+		<members>KHotelTriggerHandlerTest</members>
 		<members>KQueueableDemo</members>
 		<members>KReciepe</members>
 		<members>KReciepeInterface</members>
 		<members>KRecursiveTirggerHandler</members>
-		<members>KHotelTriggerHandler</members>
 		<members>KSObjectApex</members>
 		<members>ProcessTaskApex</members>
-		<members>kSecondApex</members>
-		<members>KHotelTriggerHandlerTest</members>
-		<members>KBasicsTest</members>
 		<members>ProcessTaskApexKTest</members>
+		<members>kSecondApex</members>
 		<members>kfirstApex</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
+		<members>welcome2vf</members>
+		<name>ApexPage</name>
+	</types>
+	<types>
+		<members>KHotelTrigger</members>
 		<members>KNoTestLeads</members>
 		<members>KRecursiveTrigger</members>
-		<members>KHotelTrigger</members>
 		<name>ApexTrigger</name>
 	</types>
 	<types>
@@ -51,6 +55,10 @@
 		<members>KReservationFlow</members>
 		<members>Welcome_Screen</members>
 		<name>Flow</name>
+	</types>
+	<types>
+		<members>kbasicFirst</members>
+		<name>LightningComponentBundle</name>
 	</types>
 	<types>
 		<members>Dev_SFDC_License</members>

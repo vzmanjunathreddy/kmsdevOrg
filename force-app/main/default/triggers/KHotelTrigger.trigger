@@ -9,7 +9,7 @@ trigger KHotelTrigger on KHotel__c (before insert,after insert) {
         
          if(Trigger.isAfter)
            {
-  		  	KHotelTriggerHandler.HotelAfterOperation(Trigger.New);
+  			KHotelTriggerHandler.HotelAfterOperation(Trigger.New);
            } 
     }
     

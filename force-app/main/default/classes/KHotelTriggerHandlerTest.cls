@@ -5,14 +5,15 @@ public class KHotelTriggerHandlerTest {
     static void testHotelBeforeOperation()
     {
  
-       // List<KHotel__c> hotelsCollection = new List<KHotel__c>();
+        
+       // Setup Test Data
+       List<KHotel__c> hotelsCollection = new List<KHotel__c>();
+       KHotel__c hotels= new KHotel__c(Name='BBC News IN');
+       hotelsCollection.add(hotels);
 
-        //KHotel__c hotels= new KHotel__c(Name='ABC News');
-        //hotelsCollection.add(hotels);
+       insert hotelsCollection;
 
-        //insert hotelsCollection;
-
-       List<KHotel__c> hotelsCollection = [Select Id,Name from KHotel__c Limit 10];
+       //List<KHotel__c> hotelsCollection = [Select Id,Name from KHotel__c Limit 10];
         Test.startTest(); 
         KHotelTriggerHandler.HotelBeforeOperation(hotelsCollection);
         Test.stopTest();
@@ -22,8 +23,12 @@ public class KHotelTriggerHandlerTest {
     @isTest
     static void testHotelAfterOperation()
     {
- 
-       List<KHotel__c> hotelsCollection = [Select Id,Name from KHotel__c Limit 1];
+        List<KHotel__c> hotelsCollection = new List<KHotel__c>();
+       KHotel__c hotels= new KHotel__c(Name='BBC News IN');
+       hotelsCollection.add(hotels);
+
+       insert hotelsCollection;
+     //  List<KHotel__c> hotelsCollection = [Select Id,Name from KHotel__c Limit 1];
         Test.startTest(); 
         
         KHotelTriggerHandler.HotelAfterOperation(hotelsCollection);

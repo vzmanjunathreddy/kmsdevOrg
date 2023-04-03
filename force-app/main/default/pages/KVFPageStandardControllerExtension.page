@@ -1,0 +1,39 @@
+<apex:page standardController="Account"  extensions="KCustomController">
+ 
+
+   <apex:PageBlock >
+    <apex:form >
+      <apex:pageBlockSection title="Account Details" >
+      
+        <div> Welcome to VF Development {!$User.FirstName} and you are view the Account of {!account.Name} </div>
+      
+      </apex:pageBlockSection>
+      
+            <apex:pageBlockSection title="Create Account {!$User.FirstName}">
+
+      
+      </apex:pageBlockSection>
+      
+        <apex:pageBlock title="My Content" mode="edit">
+        
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="Save"/>
+                <apex:commandButton action="{!cancel}" value="Cancel the record"/>
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection title="My Content Section" columns="2">
+                <apex:inputField value="{!account.name}"/>
+                <apex:inputField value="{!account.site}"/>
+                <apex:inputField value="{!account.type}"/>
+                <apex:inputField value="{!account.accountNumber}"/>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Extensions data">
+                <h1>Congratulations {!WelcomeNote}</h1>
+            </apex:pageBlockSection>
+
+
+        </apex:pageBlock>
+   </apex:form>
+   </apex:PageBlock>
+</apex:page>

@@ -1,0 +1,25 @@
+<template>
+
+    <lightning-card  variant="Narrow"  title="FirstApp" icon-name="standard:account">
+        <div class="slds-var-p-around_medium">  {welcomemessage}  </div>
+    </lightning-card>
+
+    <lightning-card  variant="Narrow"  title="FullName" icon-name="custom:custom51">
+        <div class="slds-var-p-around_medium">  {userName} </div>
+    </lightning-card>
+
+    <lightning-card  variant="Narrow"  title="SumOfNumber" icon-name="custom:custom60">
+        <div class="slds-var-p-around_medium"> {sumofNumbers}</div>
+    </lightning-card>
+
+    <lightning-card  variant="Narrow"  title="Dynamic Value" icon-name="custom:custom64">
+        
+        
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input type="text" label="Dynamic Value" onchange= {handleDynamicChange} value= {dynamic}></lightning-input>
+        </div>
+
+        <div class="slds-var-p-around_medium">User entered Input is :  {dynamic}</div>
+    </lightning-card>
+
+</template>

@@ -1,0 +1,17 @@
+<template>
+    <lightning-card  variant="Narrow"  title="For Loop" icon-name="custom:custom80">
+     
+        <div class="slds-var-p-around_medium">       
+            <template for:each= "{carList}" for:item= "car" >
+                <ul key= {car} class="slds-var-p-around_medium">
+                    <li> {car}</li>
+                </ul>  
+            </template>
+            <template for:each= "{ceoList}" for:item= "ceo" >
+                <ul key= {ceo.id} class="slds-var-p-around_medium">
+                    <li>Name is : {ceo.name} and Company is {ceo.company}</li>
+                </ul>  
+            </template>
+    </div>
+    </lightning-card>
+</template>
