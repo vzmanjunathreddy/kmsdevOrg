@@ -1,0 +1,33 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item>   
+               <lightning-card title="Hotels Available" icon-name="custom:custom46">
+                    <div class="slds-p-around_medium wrapper msc">
+                          <template if:true={hotels.length}>
+                           <div class="content">
+                               <template for:each= {hotels.data} for:item="hotel">
+                                    <c-khotel-tile  class="hoteltile" key={hotel.Id} hotel={hotel} onhotelselect={handleHotelselect}></c-khotel-tile>                
+                            </template>
+                        </div>
+                    </template>
+                    <template if:false={hotels.length}>
+                        <p >There are no Hotels matching your current selection</p>
+                    </template>
+                </div>
+            </lightning-card>
+     </lightning-layout-item>
+                <lightning-layout-item>
+                    <div class="msc">
+                        <aside class="sidebar-second">
+                            <template if:true={selectedHotel}>
+                                <div class="container">
+                                    <div>{selectedHotel.Name}</div>
+                                    <img class="product-img" src= {selectedHotel.HotelPicture__c}></img>
+                                </div>
+                            </template>
+                        </aside>
+                    </div>
+            </lightning-layout-item>
+                
+    </lightning-layout>
+</template>

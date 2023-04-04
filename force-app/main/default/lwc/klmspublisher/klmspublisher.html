@@ -1,0 +1,11 @@
+<template>
+        <lightning-card title="LMS Pub Component" icon-name="custom:custom30">
+            <div class="slds-m-around_medium"  onhotelselect={handleHotelSelected}>
+                <template for:each={hotels.data} for:item="hotel"> 
+                    <c-klmspublishhotelitem   key={hotel.Id} hotel={hotel}></c-klmspublishhotelitem>
+                </template>
+            </div>
+    </lightning-card>
+ </template>
+ 
+ 

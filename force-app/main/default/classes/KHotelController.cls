@@ -5,7 +5,7 @@ public class KHotelController {
 
         return [
             SELECT
-            Id,Name,State__c,City__c
+            Id,Name,State__c,City__c,HotelPicture__c
             FROM KHotel__c
             WITH SECURITY_ENFORCED
             LIMIT 10
@@ -15,7 +15,7 @@ public class KHotelController {
     @AuraEnabled(cacheable=true)
     public static List<KHotel__c> getHotelDetails(Id hotelId){
 
-        return [Select Id,Name,State__c,City__c from KHotel__c Where Id=:hotelId ];
+        return [Select Id,Name,State__c,City__c,HotelPicture__c from KHotel__c Where Id=:hotelId ];
     }
 
     @AuraEnabled(cacheable=true)
