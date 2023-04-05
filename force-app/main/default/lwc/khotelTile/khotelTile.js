@@ -7,10 +7,13 @@ export default class KhotelTile extends LightningElement {
 
     handleSelect(event)
     {
+        event.preventDefault();
+        const hotelId=this.hotel.Id;
+        console.log(this.hotel);
         const selectEvent= new CustomEvent('hotelselect',
         {
-            detail:this.hotel.Id,
-            bubbles:true
+            detail:hotelId
+           
         });
         this.dispatchEvent(selectEvent);
     }

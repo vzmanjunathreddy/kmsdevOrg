@@ -1,33 +1,31 @@
 <template>
     <lightning-layout>
-        <lightning-layout-item>   
-               <lightning-card title="Hotels Available" icon-name="custom:custom46">
+        <lightning-layout-item style="max-width: 60%">   
+               <lightning-card title="Hotels List" icon-name="custom:custom46">
                     <div class="slds-p-around_medium wrapper msc">
-                          <template if:true={hotels.length}>
+                          <template if:true={hotels.data}>
                            <div class="content">
                                <template for:each= {hotels.data} for:item="hotel">
                                     <c-khotel-tile  class="hoteltile" key={hotel.Id} hotel={hotel} onhotelselect={handleHotelselect}></c-khotel-tile>                
                             </template>
                         </div>
                     </template>
-                    <template if:false={hotels.length}>
+                    <template if:false={hotels.data}>
                         <p >There are no Hotels matching your current selection</p>
                     </template>
                 </div>
             </lightning-card>
-     </lightning-layout-item>
-                <lightning-layout-item>
-                    <div class="msc">
-                        <aside class="sidebar-second">
-                            <template if:true={selectedHotel}>
-                                <div class="container">
-                                    <div>{selectedHotel.Name}</div>
-                                    <img class="product-img" src= {selectedHotel.HotelPicture__c}></img>
-                                </div>
-                            </template>
-                        </aside>
-                    </div>
-            </lightning-layout-item>
-                
+      </lightning-layout-item>   
+      <lightning-layout-item style="min-width: 40%">
+        <lightning-card title="Hotels Details" icon-name="custom:custom46">
+            <div class="slds-p-around_medium" style="min-width: 30%;display:flex;flex-wrap:wrap;order:3px">
+                  Hotel Name is:  {selectedHotel.Name}  
+                </div>
+                <div class="slds-p-around_medium">
+                    <img style="max-width:40%;" src= {selectedHotel.HotelPicture__c}></img>        
+                </div>
+               
+                 </lightning-card>
+      </lightning-layout-item>          
     </lightning-layout>
 </template>

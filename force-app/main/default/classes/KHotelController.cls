@@ -6,8 +6,9 @@ public class KHotelController {
         return [
             SELECT
             Id,Name,State__c,City__c,HotelPicture__c
-            FROM KHotel__c
-            WITH SECURITY_ENFORCED
+            FROM KHotel__c 
+            Where HotelPicture__c!=NULL
+            WITH SECURITY_ENFORCED 
             LIMIT 10
         ];
     }
